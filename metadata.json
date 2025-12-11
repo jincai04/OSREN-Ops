@@ -1,0 +1,7 @@
+{
+  "name": "Osren Integrated Ops Manager",
+  "description": "A unified ERP mobile application for automotive care manufacturing and distribution, featuring AI-driven insights, paperless workflows, and role-based operations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
