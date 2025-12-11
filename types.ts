@@ -10,9 +10,16 @@ export interface InventoryItem {
   id: string;
   name: string;
   sku: string;
+  category: string;
+  brand: string;
   quantity: number;
   minLevel: number;
-  category: string;
+  unitCost: number;
+  sellingPrice: number;
+  profit?: number; // Calculated: SellingPrice - UnitCost
+  stockValue?: number; // Calculated: Quantity * UnitCost
+  lowStockFlag?: number; // Calculated: IF(Quantity < MinLevel, 1, 0)
+  supplier: string;
   lastMovement: string;
 }
 

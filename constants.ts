@@ -1,11 +1,11 @@
 import { InventoryItem, Invoice, SalesOrder, DeliveryRoute, CashFlowData, UserRole } from './types';
 
 export const MOCK_INVENTORY: InventoryItem[] = [
-  { id: '1', name: 'Bubble & Wax Shampoo', sku: 'OS-BW-500', quantity: 120, minLevel: 50, category: 'Cleaning', lastMovement: '2023-10-25' },
-  { id: '2', name: 'Luminous Paintwork Polish', sku: 'OS-LP-200', quantity: 15, minLevel: 40, category: 'Polishing', lastMovement: '2023-10-20' },
-  { id: '3', name: 'Tire Shine Gel', sku: 'OS-TS-100', quantity: 200, minLevel: 50, category: 'Wheels', lastMovement: '2023-10-26' },
-  { id: '4', name: 'Microfiber Towel (Blue)', sku: 'OS-MF-BLU', quantity: 5, minLevel: 100, category: 'Accessories', lastMovement: '2023-10-15' },
-  { id: '5', name: 'Ceramic Coating Kit', sku: 'OS-CC-PRO', quantity: 8, minLevel: 10, category: 'Protection', lastMovement: '2023-10-10' },
+  { id: '1', name: 'Bubble & Wax Shampoo', sku: 'OS-BW-500', category: 'Cleaning', brand: 'OSREN', quantity: 120, minLevel: 50, unitCost: 5.00, sellingPrice: 8.50, supplier: 'Supplier A', lastMovement: '2023-10-25' },
+  { id: '2', name: 'Luminous Paintwork Polish', sku: 'OS-LP-200', category: 'Polishing', brand: 'OSREN', quantity: 15, minLevel: 40, unitCost: 12.00, sellingPrice: 18.00, supplier: 'Supplier B', lastMovement: '2023-10-20' },
+  { id: '3', name: 'Tire Shine Gel', sku: 'OS-TS-100', category: 'Wheels', brand: 'OSREN', quantity: 200, minLevel: 50, unitCost: 3.50, sellingPrice: 6.00, supplier: 'Supplier C', lastMovement: '2023-10-26' },
+  { id: '4', name: 'Microfiber Towel (Blue)', sku: 'OS-MF-BLU', category: 'Accessories', brand: 'OSREN', quantity: 5, minLevel: 100, unitCost: 1.20, sellingPrice: 2.50, supplier: 'Supplier A', lastMovement: '2023-10-15' },
+  { id: '5', name: 'Ceramic Coating Kit', sku: 'OS-CC-PRO', category: 'Protection', brand: 'OSREN', quantity: 8, minLevel: 10, unitCost: 45.00, sellingPrice: 75.00, supplier: 'Supplier D', lastMovement: '2023-10-10' },
 ];
 
 export const MOCK_INVOICES: Invoice[] = [

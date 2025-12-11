@@ -24,9 +24,13 @@ export const readExcel = (file: File): Promise<InventoryItem[]> => {
             id: item.id || item.ID,
             name: item.name || item.Name,
             sku: item.sku || item.SKU,
+            category: item.category || item.Category,
+            brand: item.brand || item.Brand,
             quantity: parseInt(item.quantity || item.Quantity || 0),
             minLevel: parseInt(item.minLevel || item.MinLevel || 10),
-            category: item.category || item.Category,
+            unitCost: parseFloat(item.unitCost || item.UnitCost || 0),
+            sellingPrice: parseFloat(item.sellingPrice || item.SellingPrice || 0),
+            supplier: item.supplier || item.Supplier,
             lastMovement: item.lastMovement || item.LastMovement || new Date().toISOString().split('T')[0],
           } as InventoryItem;
         });
@@ -44,9 +48,13 @@ export const writeExcel = (inventory: InventoryItem[]) => {
     ID: item.id,
     Name: item.name,
     SKU: item.sku,
+    Category: item.category,
+    Brand: item.brand,
     Quantity: item.quantity,
     MinLevel: item.minLevel,
-    Category: item.category,
+    UnitCost: item.unitCost,
+    SellingPrice: item.sellingPrice,
+    Supplier: item.supplier,
     LastMovement: item.lastMovement,
   }));
   const worksheet = XLSX.utils.json_to_sheet(data);
